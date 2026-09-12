@@ -18,6 +18,7 @@ a { color: inherit; text-decoration: none; }
 .brand-mark { align-items: center; background: var(--ink); border-radius: 50%; color: var(--lime); display: flex; font-size: 12px; height: 38px; justify-content: center; letter-spacing: -.08em; width: 38px; }
 nav { align-items: center; display: flex; gap: 32px; font-size: 13px; font-weight: 700; }
 nav a:not(.nav-cta) { color: var(--muted); }
+.presentation-link { line-height: 1.2; text-align: right; }
 nav a:hover, .text-link:hover { color: var(--coral); }
 .nav-cta { border: 1px solid var(--ink); border-radius: 100px; padding: 12px 17px; }
 .nav-cta span, .button span { font-size: 17px; margin-left: 10px; }
@@ -52,5 +53,39 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 .service-card:hover { box-shadow: 0 14px 26px rgba(23,35,31,.08); transform: translateY(-5px); }
 .process { background: rgba(235,232,220,.72); }
 .contact { background-image: radial-gradient(circle at 84% 25%, rgba(255,255,255,.17), transparent 16rem); }
+.presentation-hero { align-items: end; display: grid; gap: 90px; grid-template-columns: 1.15fr .85fr; margin: auto; max-width: 1172px; padding: 110px 0 125px; }
+.presentation-hero h1 { margin-bottom: 28px; }
+.presentation-hero .button { margin-top: 28px; }
+.presentation-note { background: var(--ink); color: var(--paper); min-height: 280px; padding: 30px; transform: rotate(-2deg); }
+.presentation-note .card-number { color: var(--lime); }
+.presentation-note p { font-family: "Space Grotesk", sans-serif; font-size: 24px; letter-spacing: -.03em; line-height: 1.15; margin: 67px 0 26px; }
+.note-line { background: var(--coral); height: 2px; margin-bottom: 14px; width: 34px; }
+.presentation-note strong { color: rgba(245,243,237,.72); font-size: 12px; }
+.presentation-details { border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); margin: auto; max-width: 1172px; }
+.presentation-details article { min-height: 285px; padding: 27px 30px 30px 0; }
+.presentation-details article + article { border-left: 1px solid var(--line); padding-left: 30px; }
+.presentation-details h2 { font-size: 31px; margin: 69px 0 13px; }
+.presentation-details p { color: var(--muted); font-size: 14px; line-height: 1.6; max-width: 270px; }
+.presentation-details .price { color: var(--ink); font-family: "Space Grotesk", sans-serif; font-size: 20px; margin-bottom: 7px; }
+.presentation-details .price strong { color: var(--coral); font-size: 34px; }
+.presentation-contact { background: var(--coral); padding: 110px 34px; text-align: center; }
+.presentation-contact .eyebrow { color: rgba(23,35,31,.65); justify-content: center; }
+.presentation-contact .eyebrow span { background: var(--ink); }
+.presentation-contact h2 { font-size: clamp(40px, 6vw, 78px); line-height: .95; margin: 0 auto 25px; }
+.presentation-contact > p:not(.eyebrow) { margin: 0 auto 30px; max-width: 450px; }
+.presentation-contact .button { margin-top: 4px; }
+footer a:hover { color: var(--coral); }
+@media (max-width: 800px) {
+    .presentation-page .site-header { align-items: flex-start; flex-direction: column; gap: 20px; }
+    .presentation-page nav { flex-wrap: wrap; gap: 12px 16px; }
+    .presentation-page nav a:not(.nav-cta) { display: block; }
+    .presentation-hero { display: block; padding: 80px 20px 90px; }
+    .presentation-note { margin: 55px 8px 0; }
+    .presentation-details { display: block; margin: 0 20px; }
+    .presentation-details article, .presentation-details article + article { border-left: 0; border-top: 1px solid var(--line); min-height: 0; padding: 26px 0 30px; }
+    .presentation-details article:first-child { border-top: 0; }
+    .presentation-details h2 { margin-top: 38px; }
+    .presentation-contact { padding: 90px 20px; }
+}
 @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
